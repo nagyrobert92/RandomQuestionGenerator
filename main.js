@@ -7,13 +7,6 @@ const generateQuestion = function() {
     .then(resp => resp.json())
     .then(function(data) {
       let random = data.slip.advice;
-      question.innerHTML += random;
-      function timeOut() {
-        question.innerHTML = "";
-      }
-      function timedText() {
-        setTimeout(timeOut, 2500);
-      }
-      timedText();
+      question.innerHTML = random;
     });
 };
